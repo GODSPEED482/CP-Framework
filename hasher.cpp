@@ -5,17 +5,17 @@
 using namespace std;
 
 
-struct DoubleHasher{
+struct Hasher{
     int sz, mod, p;
     vector<int> fhash, rhash;
     vector<int> pk;
     string s;
 
-    DoubleHasher(){
+    Hasher(){
 
     }
 
-    DoubleHasher(string& s, int mod, int p): sz(s.size()), mod(mod), p(p){
+    Hasher(string& s, int mod, int p): sz(s.size()), mod(mod), p(p){
         this -> s = s;
         fhash.resize(sz), pk.resize(sz), rhash.resize(sz);
         fhash[0] = ((s[0] - 'a') + 1)%mod;
@@ -110,7 +110,7 @@ int main()
     size_ = s1.length();
     s1 = s1 + s1;
 
-    hs1 = DoubleHasher(s1, 1e9 + 7, 31);
+    hs1 = Hasher(s1, 1e9 + 7, 31);
     vector<int> v(size_, 0);
     for(int i = 0; i< size_; i++){
         v[i] = i;
