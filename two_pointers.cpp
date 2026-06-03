@@ -4,14 +4,6 @@
 #define FastIO ios_base::sync_with_stdio(0); cin.tie(NULL);
 using namespace std;
 
-/*
-    AUTHOR: RISHAV CHOWDHURY
-    TOPIC: TWO POINTERS
-    APPLICABLE SPACE: ARRAY, VECTOR, AND OTHER CONTIGUOUS SPACES
-    IDENTIFICATION PIPELINE:
-        1.
-*/
-
 struct DataDashboard{
     queue<int> ds;
     int k;
